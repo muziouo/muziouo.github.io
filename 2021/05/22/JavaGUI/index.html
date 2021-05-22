@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2021 | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="JavaGUI简介Gui的核心技术：Swing  AWT 需要jre环境 AWT组件和容器1.Frame12345678910111213141516171819202122package GUI.lesson01;import java.awt.*;&#x2F;&#x2F;GUI的第一个界面public class TestFrame &amp;#123;    public static void m">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2021/index.html">
+<meta property="og:url" content="http://example.com/2021/05/22/JavaGUI/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="JavaGUI简介Gui的核心技术：Swing  AWT 需要jre环境 AWT组件和容器1.Frame12345678910111213141516171819202122package GUI.lesson01;import java.awt.*;&#x2F;&#x2F;GUI的第一个界面public class TestFrame &amp;#123;    public static void m">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-05-22T13:49:58.249Z">
+<meta property="article:modified_time" content="2021-05-22T13:49:58.249Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -150,202 +154,146 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-JavaGUI" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="JavaGUI"><a href="#JavaGUI" class="headerlink" title="JavaGUI"></a>JavaGUI</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Gui的核心技术：Swing  AWT</p>
+<p>需要jre环境</p>
+<h2 id="AWT"><a href="#AWT" class="headerlink" title="AWT"></a>AWT</h2><h3 id="组件和容器"><a href="#组件和容器" class="headerlink" title="组件和容器"></a>组件和容器</h3><h4 id="1-Frame"><a href="#1-Frame" class="headerlink" title="1.Frame"></a>1.Frame</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">package GUI.lesson01;</span><br><span class="line"></span><br><span class="line">import java.awt.*;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;GUI的第一个界面</span><br><span class="line">public class TestFrame &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        &#x2F;&#x2F;Frame</span><br><span class="line">        Frame frame &#x3D; new Frame(&quot;我的第一个Java图像界面窗口&quot;);</span><br><span class="line">        &#x2F;&#x2F;需要设置可见性</span><br><span class="line">        frame.setVisible(true);</span><br><span class="line">        &#x2F;&#x2F;设置窗口大小</span><br><span class="line">        frame.setSize(400,400);</span><br><span class="line">        &#x2F;&#x2F;设置背景颜色  Color</span><br><span class="line">        frame.setBackground(new Color(88, 151, 142));</span><br><span class="line">        &#x2F;&#x2F;弹出的初始位置</span><br><span class="line">        frame.setLocation(200,200);</span><br><span class="line">        &#x2F;&#x2F;设置大小固定</span><br><span class="line">        frame.setResizable(false);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-面板Panel"><a href="#2-面板Panel" class="headerlink" title="2.面板Panel"></a>2.面板Panel</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">package GUI.lesson01;</span><br><span class="line"></span><br><span class="line">import java.awt.*;</span><br><span class="line">import java.awt.event.WindowAdapter;</span><br><span class="line">import java.awt.event.WindowEvent;</span><br><span class="line"></span><br><span class="line">public class TestPanel &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Frame frame &#x3D; new Frame();</span><br><span class="line">        Panel panel &#x3D; new Panel();</span><br><span class="line">        &#x2F;&#x2F;设置布局</span><br><span class="line">        frame.setLayout(null);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;坐标</span><br><span class="line">        frame.setBounds(300,300,500,500);</span><br><span class="line">        frame.setBackground(new Color(118, 54, 54));</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;panel设置坐标，相对于frame</span><br><span class="line">        panel.setBounds(50,50,400,400);</span><br><span class="line">        panel.setBackground(new Color(0x588B37));</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;frame.add(panel)添加</span><br><span class="line">        frame.add(panel);</span><br><span class="line">        frame.setVisible(true);</span><br><span class="line">        &#x2F;&#x2F;监听事件，监听窗口关闭实践 System.exit(0)</span><br><span class="line">        &#x2F;&#x2F;适配器模式</span><br><span class="line">        frame.addWindowListener(new WindowAdapter() &#123;</span><br><span class="line">            &#x2F;&#x2F;窗口点击关闭的时候需要做的事情</span><br><span class="line">            @Override</span><br><span class="line">            public void windowClosing(WindowEvent e) &#123;</span><br><span class="line">                System.exit(0);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/22/JavaGUI/" class="archive-article-date">
-  	<time datetime="2021-05-22T13:49:58.249Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-22</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/05/22/JavaGUI/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/11/Java/" class="archive-article-date">
-  	<time datetime="2021-05-11T14:45:13.910Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-11</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/10/Git/" class="archive-article-date">
-  	<time datetime="2021-05-10T06:12:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-10</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/10/Git/">Git</a>
-    </h1>
+  
+    <a href="/2021/05/11/Java/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/06/Hexo%E6%8A%A5%E9%94%99%EF%BC%9Aspawn%20failed%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="archive-article-date">
-  	<time datetime="2021-05-06T01:40:29.795Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-06</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/28/R%E8%AF%AD%E8%A8%80/" class="archive-article-date">
-  	<time datetime="2021-04-28T14:25:28.170Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-28</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/25/md%E9%83%A8%E7%BD%B2%E5%88%B0hexo/" class="archive-article-date">
-  	<time datetime="2021-04-25T12:20:07.126Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-25</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/25/SQL%20Server/" class="archive-article-date">
-  	<time datetime="2021-04-25T12:03:02.304Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-25</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/23/hello-world/" class="archive-article-date">
-  	<time datetime="2021-04-23T02:33:56.929Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/23/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -368,8 +316,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
